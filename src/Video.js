@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import io from 'socket.io-client'
 import VideoOverlay from './VideoOverlay'; // Import VideoOverlay component
 // import faker from "faker"
+import * as Realm from "realm-web";
+
 
 import {IconButton, Badge, Input, Button} from '@material-ui/core'
 import VideocamIcon from '@material-ui/icons/Videocam'
