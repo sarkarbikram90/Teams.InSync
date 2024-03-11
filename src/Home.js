@@ -27,15 +27,15 @@ class Home extends Component {
 		return (
 			<div className="container2">
 				<div style={{fontSize: "14px", background: "white", width: "10%", textAlign: "right", margin: "auto", marginBottom: "10px"}}>
-					Source code: 
-					<IconButton style={{color: "black"}} onClick={() => window.location.href="https://github.com/sarkarbikram90/Teams.InSync"}>
+					Source Code: 
+					<IconButton style={{color: "black"}} onClick={() => window.open("https://github.com/sarkarbikram90/Teams.InSync", "_blank")}>
 						<GitHubIcon />
 					</IconButton>
 				</div>
 				
 				<div>
 					<h1 style={{ fontSize: "45px" }}>InSync</h1>
-					<p style={{ fontWeight: "200" }}>InSync - is a collaboration and communication website that lets you stay in touch with all your friends and team</p>
+					<p style={{ fontWeight: "200" }}>InSync - is a browser based collaboration and communication application that lets you stay in touch with all your friends and team</p>
 				</div>
 
 				<div style={{

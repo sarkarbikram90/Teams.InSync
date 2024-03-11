@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import io from 'socket.io-client'
-import faker from "faker"
+import VideoOverlay from './VideoOverlay'; // Import VideoOverlay component
+// import faker from "faker"
 
 import {IconButton, Badge, Input, Button} from '@material-ui/core'
 import VideocamIcon from '@material-ui/icons/Videocam'
@@ -53,8 +54,10 @@ class Video extends Component {
 			newmessages: 0,
 			askForUsername: true,
 			// username: faker.internet.userName(),
-		}
-		connections = {}
+			userNameDisplayed: '',
+            isVideoOn: false,
+		};
+		connections = {};
 
 		this.getPermissions()
 	}
@@ -379,6 +382,8 @@ class Video extends Component {
 	handleAudio = () => this.setState({ audio: !this.state.audio }, () => this.getUserMedia())
 	handleScreen = () => this.setState({ screen: !this.state.screen }, () => this.getDislayMedia())
 
+	  	
+
 	handleEndCall = () => {
 		try {
 			let tracks = this.localVideoref.current.srcObject.getTracks()
@@ -524,10 +529,15 @@ class Video extends Component {
 								<video id="my-video" ref={this.localVideoref} autoPlay muted style={{
 									borderStyle: "solid",borderColor: "#bdbdbd",margin: "10px",objectFit: "fill",
 									width: "100%",height: "100%"}}></video>
+
+                            <VideoOverlay userName={this.state.username} isVideoOn={this.state.video} />
+
 							</Row>
 						</div>
 					</div>
 				}
+
+				
 			</div>
 		)
 	}
