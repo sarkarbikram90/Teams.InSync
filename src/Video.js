@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import io from 'socket.io-client'
 import VideoOverlay from './VideoOverlay'; // Import VideoOverlay component
-// import faker from "faker"
-import * as Realm from "realm-web";
+
+
 
 
 import {IconButton, Badge, Input, Button} from '@material-ui/core'
@@ -55,7 +55,6 @@ class Video extends Component {
 			message: "",
 			newmessages: 0,
 			askForUsername: true,
-			// username: faker.internet.userName(),
 			userNameDisplayed: '',
             isVideoOn: false,
 		};
