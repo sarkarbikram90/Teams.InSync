@@ -71,10 +71,13 @@
     "url": "git+https://github.com/sarkarbikram90/Teams.InSync.git"
   },
   "author": "Bikram Sarkar",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sarkarbikram90/Teams.InSync/issues"
   },
   "homepage": "https://github.com/sarkarbikram90/Teams.InSync#readme",
-  "description": ""
+  "description": "insync",
+  "keywords": [
+    "insync"
+  ]
 }
