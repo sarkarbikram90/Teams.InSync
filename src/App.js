@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Video from './Video';
 import Home from './Home';
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 class App extends Component {
     render() {
