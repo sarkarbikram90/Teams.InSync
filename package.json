@@ -64,5 +64,17 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/socket.io-client": "^3.0.0",
     "cross-env": "^7.0.3"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarkarbikram90/Teams.InSync.git"
+  },
+  "author": "Bikram Sarkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarkarbikram90/Teams.InSync/issues"
+  },
+  "homepage": "https://github.com/sarkarbikram90/Teams.InSync#readme",
+  "description": ""
 }
