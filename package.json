@@ -14,7 +14,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
-    "mongodb": "^6.5.0",
     "nodemon": "^2.0.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
@@ -28,7 +27,6 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.4.1",
-    "realm-web": "^2.0.0",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
     "standard": "^14.3.3",
@@ -36,7 +34,7 @@
   },
   "scripts": {
     "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon app.js\" \"cross-env NODE_ENV=dev PORT=8000 react-scripts start\"",
-    "server": "NODE_ENV=production nodemon app.js",
+    "server": "cross-env NODE_ENV=production nodemon app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -57,27 +55,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.23.9",
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
-    "@types/faker": "^6.6.9",
-    "@types/react-router-dom": "^5.3.3",
-    "@types/socket.io-client": "^3.0.0",
     "cross-env": "^7.0.3"
-  },
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sarkarbikram90/Teams.InSync.git"
-  },
-  "author": "Bikram Sarkar",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sarkarbikram90/Teams.InSync/issues"
-  },
-  "homepage": "https://github.com/sarkarbikram90/Teams.InSync#readme",
-  "description": "insync",
-  "keywords": [
-    "insync"
-  ]
+  }
 }
