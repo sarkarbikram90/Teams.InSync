@@ -43,7 +43,7 @@ class Home extends Component {
 					textAlign: "center", margin: "auto", marginTop: "100px"
 				}}>
 					<p style={{ margin: 0, fontWeight: "bold", paddingRight: "50px" }}>Start a Meeting</p>
-					<Input placeholder="URL" onChange={e => this.handleChange(e)} />
+					<Input placeholder="Click Join" onChange={e => this.handleChange(e)} />
 					<Button variant="contained" color="primary" onClick={this.join} style={{ margin: "20px" }}>Join</Button>
 				</div>
 			</div>
