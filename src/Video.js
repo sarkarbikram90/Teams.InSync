@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import io from 'socket.io-client'
 import VideoOverlay from './VideoOverlay'; // Import VideoOverlay component
 
-
-
-
 import {IconButton, Badge, Input, Button} from '@material-ui/core'
 import VideocamIcon from '@material-ui/icons/Videocam'
 import VideocamOffIcon from '@material-ui/icons/VideocamOff'
@@ -127,7 +124,7 @@ class Video extends Component {
 			if (id === socketId) continue
 
 			connections[id].addStream(window.localStream)
-
+			
 			connections[id].createOffer().then((description) => {
 				connections[id].setLocalDescription(description)
 					.then(() => {
@@ -153,7 +150,7 @@ class Video extends Component {
 
 				for (let id in connections) {
 					connections[id].addStream(window.localStream)
-
+					
 					connections[id].createOffer().then((description) => {
 						connections[id].setLocalDescription(description)
 							.then(() => {
@@ -189,7 +186,7 @@ class Video extends Component {
 			if (id === socketId) continue
 
 			connections[id].addStream(window.localStream)
-
+			
 			connections[id].createOffer().then((description) => {
 				connections[id].setLocalDescription(description)
 					.then(() => {

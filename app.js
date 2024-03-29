@@ -1,12 +1,14 @@
-const express = require('express')
-const http = require('http')
-var cors = require('cors')
-const app = express()
-const bodyParser = require('body-parser')
-const path = require("path")
-var xss = require("xss")
-
-var server = http.createServer(app)
+const express = require('express');
+const https = require('https');
+var cors = require('cors');
+const app = express();
+const bodyParser = require('body-parser');
+const path = require("path");
+const xss = require("xss");
+const fs = require('fs');
+const key = fs.readFileSync('create-cert-key.pem');
+const cert = fs.readFileSync('create-cert.pem');
+const server = https.createServer({key, cert},app);
 var io = require('socket.io')(server)
 
 app.use(cors())
@@ -20,13 +22,15 @@ if(process.env === 'cross-env'.NODE_ENV === 'production'){
 }
 app.set('port', process.env.PORT || 4001)
 
-sanitizeString = (str) => {
+const sanitizeString = (str) => {
 	return xss(str)
-}
+};
 
-connections = {}
-messages = {}
-timeOnline = {}
+// Socket.io configuration
+
+let connections = {};
+let messages = {};
+let timeOnline = {};
 
 io.on('connection', (socket) => {
 
